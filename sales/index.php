@@ -28,19 +28,19 @@ $result = $stmt->get_result();
 <body>
     <?php include '../navbar.php'; ?>
 
-    <h1>Welcome, <?php echo $_SESSION['username']; ?></h1>
+    <h1>Selamat Datang, <?php echo $_SESSION['username']; ?></h1>
 
-    <h2>Orders</h2>
+    <h2>Pesanan</h2>
     <table class="table table-bordered mt-4">
     <thead class="thead-dark">
             <tr>
                 <th>No</th>
-                <th>Customer</th>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Address</th>
-                <th>Phone</th>
-                <th>Order Date</th>
+                <th>Pelanggan</th>
+                <th>Produk</th>
+                <th>Jumlah</th>
+                <th>Nama Toko & Alamat </th>
+                <th>No HP</th>
+                <th>Tanggal Pesan</th>
             </tr>
         </thead>
         <tbody>

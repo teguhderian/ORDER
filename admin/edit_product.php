@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Edit Product</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <?php include '../navbar.php'; ?>
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="number" name="price" value="<?php echo $product['price']; ?>" min="0" step="0.01" required><br>
         <label for="description">Description:</label><br>
         <textarea name="description" rows="4" cols="50"><?php echo $product['description']; ?></textarea><br>
-        <input type="submit" value="Edit Product">
+        <input type="submit" class="btn btn-primary" value="Edit Product">
     </form>
 </body>
 </html>

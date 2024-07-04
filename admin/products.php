@@ -25,13 +25,13 @@ $result = $stmt->get_result();
 
     <h1 class="text-center mt-2">Products Management</h1>
 
-    <h2 class="text-center mt-5">Add New Product</h2>
+    <h2 class="text-center mt-5">Tambah Produk Baru</h2>
 
     <div class="container d-flex justify-content-center">
         <form method="POST" action="add_product.php">
             <div class="row py-1">
                 <div class="col-sm-2">
-                    <label for="name">Name:</label>
+                    <label for="name">Nama</label>
                 </div>
                 <div class="col-sm-2">
                     <input type="text" name="name" required>
@@ -39,7 +39,7 @@ $result = $stmt->get_result();
             </div>
             <div class="row py-1">
                 <div class="col-sm-2">
-                    <label for="price">Price:</label>
+                    <label for="price">Harga</label>
                 </div>
                 <div class="col-sm-2">
                     <input type="number" name="price" min="0" step="0.01" required>
@@ -47,7 +47,7 @@ $result = $stmt->get_result();
             </div>
             <div class="row py-1">
                 <div class="col-sm-2">
-                    <label for="description">Description:</label>
+                    <label for="description">Keterangan</label>
                 </div>
                 <div class="col-sm-2">
                     <textarea name="description" rows="4" cols="50"></textarea>
@@ -62,14 +62,14 @@ $result = $stmt->get_result();
     </div>
 
 
-    <h2 class="text-center mt-4">Products List</h2>
+    <h2 class="text-center mt-4">Daftar Produk</h2>
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
                 <th>No</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Description</th>
+                <th>Nama</th>
+                <th>Harga</th>
+                <th>Keterangan</th>
                 <th>Action</th>
             </tr>
         </thead>

@@ -39,6 +39,7 @@ $result = $stmt->get_result();
                 <th>Address</th>
                 <th>Phone</th>
                 <th>Order Date</th>
+                
             </tr>
         </thead>
         <tbody>

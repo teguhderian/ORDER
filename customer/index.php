@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['product_id']) && isset
             </div>
             <div class="d-flex row py-2 justify-content-center">
                 <div class="col-sm-2">
-                    <label for="product_id">Select Product:</label>  
+                    <label for="product_id">Pilih Produk</label>  
                 </div>
                 <div class="col-sm-2">
                     <select name="product_id" id="product_id" required>
@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['product_id']) && isset
             </div>
             <div class="d-flex row py-2 justify-content-center">
                 <div class="col-sm-2">
-                    <label for="quantity">Quantity:</label>
+                    <label for="quantity">Jumlah</label>
                 </div>
                 <div class="col-sm-2">
                     <input type="number" name="quantity" id="quantity" min="1" required>
@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['product_id']) && isset
             </div>
             <div class="d-flex row py-2 justify-content-center">
                 <div class="col-sm-2">
-                    <label for="name">Addres</label>
+                    <label for="name">Nama Toko & Alamat</label>
                 </div>
                 <div class="col-sm-2">
                     <input type="text" name="customer_address" id="customer_address"required>
@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['product_id']) && isset
             </div>
             <div class="d-flex row py-2 justify-content-center">
                 <div class="col-sm-2">
-                    <label for="name">Phone</label>
+                    <label for="name">No HP</label>
                 </div>
                 <div class="col-sm-2">
                     <input type="text" name="customer_phone" id="customer_phone"required>
@@ -115,16 +115,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['product_id']) && isset
         </div>
     </form>
 
-    <h2 class="text-center">Your Orders</h2>
+    <h2 class="text-center">Pesanan</h2>
     <table class="table table-striped mt-4">
     <thead class="thead-dark">
             <tr>
                 <th>No</th>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Address</th>
-                <th>Phone</th>
-                <th>Order Date</th>
+                <th>Produk</th>
+                <th>Jumlah</th>
+                <th>Nama Toko & Alamat</th>
+                <th>No HP</th>
+                <th>Tanggal Pesan</th>
             </tr>
         </thead>
         <tbody>
