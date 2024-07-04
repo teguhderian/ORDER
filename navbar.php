@@ -21,6 +21,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../customer/index.php">Dashboard</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../customer/info_produk.php">Info Produk</a>
+                    </li>
                 <?php endif; ?>
                 <li class="nav-item">
                     <a class="nav-link" href="../logout.php">Logout</a>
