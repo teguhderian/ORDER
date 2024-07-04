@@ -22,16 +22,15 @@ $result = $stmt->get_result();
     <meta charset="UTF-8">
     <title>Admin - Orders</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <?php include '../navbar.php'; ?>
 
-    <h1>Orders Management</h1>
+    <h1 class="text-center">Orders Management</h1>
 
-    <h2>Orders List</h2>
-    <table>
-        <thead>
+    <h2 class="text-center mt-5">Orders List</h2>
+    <table class="table table-striped">
+        <thead class="thead-dark">
             <tr>
                 <th>No</th>
                 <th>Customer</th>

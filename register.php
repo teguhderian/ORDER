@@ -32,12 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <?php include 'navbar.php'; ?> <!-- Including a navbar.php file -->
     <div class="container mt-5">
-        <h1>Register</h1>
+        <h1 class="text-center">Register</h1>
         <?php if (isset($register_error)) : ?>
             <div class="alert alert-danger"><?php echo $register_error; ?></div>
         <?php endif; ?>
         <form method="POST" action="">
-            <div class="form-group">
+            <div class="form-group mt-5">
                 <label for="username">Username:</label>
                 <input type="text" class="form-control" name="username" required>
             </div>
@@ -53,7 +53,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <option value="admin">Admin</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <div class="row">
+                <div class="d-flex col justify-content-center">
+                    <button type="submit" class="btn btn-primary mt-2">Register</button>
+                </div>
+            </div>
         </form>
     </div>
 
