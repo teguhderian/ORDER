@@ -41,22 +41,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="container">
-        <h1>Login</h1>
-        <?php if (isset($login_error)) : ?>
-            <div class="alert alert-danger"><?php echo $login_error; ?></div>
-        <?php endif; ?>
-        <form method="POST" action="">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" class="form-control" name="username" required>
+        <div class="row row-cols-1 align-items-center mt-5">
+            <div class="col text-center mt-5">
+                <h1>Login</h1>
             </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" name="password" required>
+            <?php if (isset($login_error)) : ?>
+                <div class="alert alert-danger"><?php echo $login_error; ?></div>
+            <?php endif; ?>
+
+            <form method="POST" action="">
+                <div class="form-group">
+                    <div class="col mt-5">
+                        <label for="username">Username:</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="username" required>   
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col">
+                        <label for="password">Password:</label>
+                    </div>
+                    <div class="col">
+                        <input type="password" class="form-control" name="password" required>
+                    </div>
+                </div>
+                    <div class="d-flex justify-content-center col">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+            </form> 
+            <div class="col text-center">
+                <p class="mt-3">Don't have an account? <a href="register.php">Register here</a></p>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-        </form>
-        <p class="mt-3">Don't have an account? <a href="register.php">Register here</a></p>
+        </div>
     </div>
 
     <!-- Bootstrap JS (optional, if your script requires it) -->

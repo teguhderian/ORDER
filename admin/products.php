@@ -19,16 +19,52 @@ $result = $stmt->get_result();
     <meta charset="UTF-8">
     <title>Admin - Products</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <?php include '../navbar.php'; ?>
 
-    <h1>Products Management</h1>
+    <h1 class="text-center mt-2">Products Management</h1>
 
-    <h2>Products List</h2>
-    <table>
-        <thead>
+    <h2 class="text-center mt-5">Add New Product</h2>
+
+    <div class="container d-flex justify-content-center">
+        <form method="POST" action="add_product.php">
+            <div class="row py-1">
+                <div class="col-sm-2">
+                    <label for="name">Name:</label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" name="name" required>
+                </div>
+            </div>
+            <div class="row py-1">
+                <div class="col-sm-2">
+                    <label for="price">Price:</label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="number" name="price" min="0" step="0.01" required>
+                </div>
+            </div>
+            <div class="row py-1">
+                <div class="col-sm-2">
+                    <label for="description">Description:</label>
+                </div>
+                <div class="col-sm-2">
+                    <textarea name="description" rows="4" cols="50"></textarea>
+                </div>
+            </div>
+            <div class="row py-1">
+                <div class="col d-flex justify-content-center">
+                    <input type="submit" class="btn btn-primary" value="Add Product">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <h2 class="text-center mt-4">Products List</h2>
+    <table class="table table-striped">
+        <thead class="thead-dark">
             <tr>
                 <th>No</th>
                 <th>Name</th>
@@ -48,8 +84,8 @@ $result = $stmt->get_result();
                     <td><?php echo $row['price']; ?></td>
                     <td><?php echo $row['description']; ?></td>
                     <td>
-                        <a href="edit_product.php?id=<?php echo $row['id']; ?>">Edit</a>
-                        <a href="delete_product.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>
+                        <a class="btn btn-secondary" href="edit_product.php?id=<?php echo $row['id']; ?>">Edit</a>
+                        <a class="btn btn-danger" href="delete_product.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>
                     </td>
                 </tr>
             <?php 
@@ -57,16 +93,5 @@ $result = $stmt->get_result();
                 endwhile; ?>
         </tbody>
     </table>
-
-    <h2>Add New Product</h2>
-    <form method="POST" action="add_product.php">
-        <label for="name">Name:</label>
-        <input type="text" name="name" required><br>
-        <label for="price">Price:</label>
-        <input type="number" name="price" min="0" step="0.01" required><br>
-        <label for="description">Description:</label><br>
-        <textarea name="description" rows="4" cols="50"></textarea><br>
-        <input type="submit" value="Add Product">
-    </form>
 </body>
 </html>
